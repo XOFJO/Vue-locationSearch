@@ -11,6 +11,7 @@ const props = defineProps(
   { deep: true }
 );
 
+// Calculate the current time given offset(which gained from Google timezone API)
 function calcTime(offset) {
   const d = new Date();
   const utc = d.getTime() + d.getTimezoneOffset() * 60000;
@@ -19,14 +20,6 @@ function calcTime(offset) {
   const minutes = nd.getMinutes();
   const seconds = nd.getSeconds();
   return [hours, minutes, seconds];
-
-  // var d = new Date();
-  // var utc = d.getTime() + d.getTimezoneOffset() * 60000;
-  // var nd = new Date(utc + 3600000 * offset);
-  // var hours = nd.getHours();
-  // var minutes = nd.getMinutes();
-  // var seconds = nd.getSeconds();
-  // return [hours, minutes, seconds];
 }
 
 const deg = 6;
@@ -35,6 +28,7 @@ const timeZoneName = ref();
 const timePeriod = ref('');
 let intervalId;
 
+// Fetch the timezone data from google TimeZone API and show the time on the clock
 onMounted(async () => {
   const apiKey = import.meta.env.VITE_GoogleMAP_API_KEY;
   const timestamp = Math.round(new Date().getTime() / 1000);
@@ -63,6 +57,7 @@ onMounted(async () => {
   });
 });
 
+// Remove setInterval function when this component removed
 onUnmounted(() => {
   clearInterval(intervalId);
 });
