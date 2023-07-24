@@ -18,7 +18,7 @@ npm run dev
 
 ### Show current user Location
 
-![Vite_App_-_Google_Chrome_2023-07-24_00-34-51](https://github.com/XOFJO/Vue-locationSearch/assets/38542637/dbc9e218-7b1c-4db8-89d8-0b2eb1b32cd3)
+![80679a1c-1839-48a3-9c79-12c898ee3fc7](https://github.com/XOFJO/Vue-locationSearch/assets/38542637/0b333f1d-ee07-4fd4-adc0-9d0b6ef000f1)
 
 ### Search for locations and display their markers on the map.
 
