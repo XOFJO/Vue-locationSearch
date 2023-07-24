@@ -40,7 +40,7 @@ onMounted(async () => {
     const [hours, minutes, seconds] = calcTime(data.dstOffset + data.rawOffset);
     timeZoneId.value = data.timeZoneId;
     timeZoneName.value = data.timeZoneName;
-    if (hours > 12) {
+    if (hours >= 12) {
       timePeriod.value = 'PM';
     } else if (hours < 12) {
       timePeriod.value = 'AM';
