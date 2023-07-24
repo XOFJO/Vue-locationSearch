@@ -10,7 +10,10 @@ import { Icon } from '@iconify/vue';
     <div
       className="grid-flow-col gap-4 md:place-self-center md:justify-self-end"
     >
-      <a class="cursor-pointer" href="https://www.google.com" target="_blank"
+      <a
+        class="cursor-pointer"
+        href="https://github.com/XOFJO/Vue-locationSearch"
+        target="_blank"
         ><Icon icon="mdi:github" width="35" />
       </a>
     </div>
